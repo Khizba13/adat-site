@@ -1,44 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Презентация "Адат"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Если устройство мобильное — сразу перенаправляем на PDF
+        if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            window.location.href = "адат.pdf";
+        }
+    </script>
     <style>
         body {
             margin: 0;
-            padding: 1em;
+            padding: 0;
             background-color: #f8f8f8;
-            font-family: sans-serif;
-            text-align: center;
         }
         iframe {
             width: 100%;
-            height: 90vh;
+            height: 100vh;
             border: none;
-        }
-        .pdf-link {
-            display: none;
-            margin-top: 1em;
-        }
-        @media (max-width: 768px) {
-            iframe {
-                display: none;
-            }
-            .pdf-link {
-                display: block;
-                font-size: 18px;
-                color: blue;
-            }
         }
     </style>
 </head>
 <body>
-    <h1>Презентация "Адат"</h1>
     <iframe src="адат.pdf"></iframe>
-    <div class="pdf-link">
-        <a href="адат.pdf" target="_blank">Открыть PDF-презентацию</a>
-    </div>
 </body>
 </html>
